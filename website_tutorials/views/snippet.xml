@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippets" inherit_id="website.snippets" name="Website Snippets">
+        <xpath expr="//ul" position="inside">
+            <li>
+                <a class="scroll-link" href="#snippet_website">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                        <i class="fa fa-bicycle fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+        </xpath>
+        <xpath expr="//div[@id='o_scroll']//div[@id='snippet_structure']" position="before">
+            <div class="o_panel" id="snippet_website">
+                <div class="o_panel_header">
+                    <span class="fa-stack">
+                        <i class="fa fa-bicycle fa-stack-1x"></i>
+                    </span>
+                    Website
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="website_tutorials.s_website_snippet" t-thumbnail="/website_tutorials/static/src/img/website_icon.png"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <template id="s_website_snippet">
+        <section class="website_snippet">
+            <div class="container">
+                <h1 class="text-center">
+                    Hello, Snippet!
+                </h1>
+            </div>
+        </section>
+    </template>
+</odoo>

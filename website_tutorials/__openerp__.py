@@ -7,11 +7,12 @@
     'depends': ['website'],
     'data': [
 
-        #data
-        #views
+        # data
+        # views
         'views/theme.xml',
         'views/homepage.xml',
-        #backend
+        'views/snippet.xml',
+        # backend
 
     ],
 
