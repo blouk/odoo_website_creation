@@ -7,12 +7,12 @@
             </xpath>
             <xpath expr="//script[last()]" position="after">
                 <script src="/website_tutorials/static/src/js/website.js"></script>
-                <script src="/website_tutorials/static/src/js/website.editor.js"></script>
+
             </xpath>
         </template>
         <template id="snippet_option_editor" inherit_id="website.assets_editor" name="Snippet Options Editor">
             <xpath expr="//script[last()]" position="after">
-                <!-- <script src="/website_tutorials/static/src/js/website.editor.js"></script> -->
+                <script src="/website_tutorials/static/src/js/website.editor.js"></script>
             </xpath>
         </template>
     </data>

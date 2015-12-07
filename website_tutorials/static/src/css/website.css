@@ -2203,7 +2203,7 @@ h1 { border-bottom: 1px solid #c097ff; color: #4b257f; }
 
 footer { height: initial; }
 
-#canvas { width: 0; height: 0; position: absolute; top: 0; left: 0; z-index: 50000; background: rgba(0, 0, 255, 0.05); pointer-events: none; }
+#canvas { width: 0; height: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 50000; background: rgba(0, 0, 255, 0.05); pointer-events: none; }
 
 .website_snippet.border-5 .container { border: 5px solid #964aff; }
 .website_snippet.border-10 .container { border: 10px solid #964aff; }
