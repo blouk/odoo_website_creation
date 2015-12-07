@@ -22,6 +22,20 @@
                             </div>
                         </section>
                     </div>
+                    <div>
+                        <div class="oe_snippet_thumbnail">
+                            <img class="oe_snippet_thumbnail_img" src="/website_tutorials/static/src/img/website_icon.png"/>
+                            <span class="oe_snippet_thumbnail_title primary">Last Prod</span>
+                        </div>
+                        <section class="oe_snippet_body website_products">
+                            <div class="container" contenteditable="false">
+                                <div class="row">
+                                    <h2 class="text-center">Last products</h2>
+                                </div>
+                                <div class="row product_container"/>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </xpath>
         </template>

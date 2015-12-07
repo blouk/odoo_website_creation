@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="website_tutorials.last_products">
+        <t t-as="product" t-foreach="products">
+            <div class="col-md-3 product_item">
+                <h4 class="text-center">
+                    <t t-esc="product.name"/>
+                </h4>
+                <div>
+                    <img class="img img-responsive" t-att-src="'/web/binary/image?model=product.template&amp;field=image&amp;id=' + product.id"/>
+                </div>
+                <h2 class="text-center"><t t-esc="product.price"/>&amp;euro;</h2>
+            </div>
+        </t>
+    </t>
+</templates>

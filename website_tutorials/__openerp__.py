@@ -8,6 +8,7 @@
     'data': [
 
         # data
+        'data/action_server.xml',
         # views
         'views/layout.xml',
         'views/theme.xml',

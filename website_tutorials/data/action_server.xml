@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+    <record id="website_tutorials.get_products" model="ir.actions.server">
+        <field name="name">Get Products</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="website.model_website"/>
+        <field name="condition">True</field>
+        <field eval="True" name="website_published"/>
+        <field name="website_path">get_products</field>
+        <field name="code">
+header = [('Content-Type', 'application/json')]
+user = request.env.user
+lang= request.context.get('lang')
+
+product_tmp_model = env['product.template'].with_context(lang=lang, pricelist=user.partner_id.property_product_pricelist.id)
+products = product_tmp_model.search([('website_published','=',True)],order='id DESC',limit=3)
+
+result= '['
+for i,product in enumerate(products):
+  if i==0:
+    result +='{"id":%i,"name":"%s","price":"%s"}' %(product.id,product.name,'%.2f' %product.price)
+    continue
+  result +=',{"id":%i,"name":"%s","price":"%s"}' %(product.id,product.name,'%.2f' %product.price)
+result +=']'
+
+response = request.make_response(result, headers=header)
+        </field>
+        </record>
+    </data>
+</openerp>
