@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <template id="website.homepage" name="Homepage">
-        <t t-call="website.layout">
-            <div id="wrap">
-                <div class="oe_structure oe_empty"/>
-                <section>
-                    <div class="container">
-                        <h1>Hello World</h1>
-                    </div>
-                </section>
-                <div class="oe_structure oe_empty"/>
-            </div>
-        </t>
-    </template>
-</odoo>
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="website.homepage" name="Homepage">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure"/>
+                    <section>
+                        <div class="container">
+                            <h1>Hello World</h1>
+                        </div>
+                    </section>
+                    <div class="oe_structure oe_empty"/>
+                </div>
+            </t>
+        </template>
+    </data>
+</openerp>
