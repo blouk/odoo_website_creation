@@ -2,12 +2,13 @@
 <openerp>
     <data>
         <template id="layout" inherit_id="website.layout">
-        
+
             <xpath expr="//body//main" position="replace">
                 <section>
                     <div class="container">
                         <div class="col-md-3">
                             <h3>Left Cols</h3>
+                            <t t-call="website_tutorials.products_block"/>
                             <div class="oe_empty oe_structure"/>
                         </div>
                         <div class="col-md-9">
