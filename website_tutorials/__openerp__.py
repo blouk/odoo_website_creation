@@ -4,7 +4,7 @@
     'category': 'Theme',
     'version': '1.0',
     'author': 'nwi@odoo.com',
-    'depends': ['website'],
+    'depends': ['website_sale'],
     'data': [
 
         # data
