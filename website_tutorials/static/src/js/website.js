@@ -34,7 +34,6 @@
             self.$target.find('.container').clearQueue();
             self.$target.find('.container').stop();
             window.clearInterval(self.animate_time);
-
         }
     });
 
