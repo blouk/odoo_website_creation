@@ -44,24 +44,6 @@
                     </li>
                 </div>
 
-                <div data-selector=".website_snippet" data-snippet-option-id='rotation'>
-                    <li class="divider"></li>
-                    <li class="dropdown-submenu">
-                        <a href="#" tabindex="-2">Rotation</a>
-                        <ul class="dropdown-menu">
-
-                            <li >
-                                <a class="button js-minus-5" href="#">-5 deg</a>
-                            </li>
-                            <li >
-                                <a class="js-plus-5" href="#">5 deg</a>
-                            </li>
-                            <li >
-                                <a class="button js-reset" href="#">Reset</a>
-                            </li>
-                        </ul>
-                    </li>
-                </div>
 
             </xpath>
         </template>

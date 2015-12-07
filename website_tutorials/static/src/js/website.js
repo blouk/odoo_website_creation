@@ -3,5 +3,6 @@
 
 
     var website = openerp.website;
+    alert(website);
 
 })();
