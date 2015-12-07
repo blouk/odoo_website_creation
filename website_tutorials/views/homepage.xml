@@ -3,7 +3,7 @@
     <template id="website.homepage" name="Homepage">
         <t t-call="website.layout">
             <div id="wrap">
-                <div class="oe_structure oe_empty"/>
+                <div class="oe_structure"/>
                 <section>
                     <div class="container">
                         <h1>Hello World</h1>
