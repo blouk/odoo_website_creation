@@ -3,7 +3,6 @@
 
 
     var website = openerp.website;
-    if (!website.snippet) website.snippet = {};
 
     website.snippet.options.snippet_handler = website.snippet.Option.extend({
 
