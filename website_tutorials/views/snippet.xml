@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <template id="snippets" inherit_id="website.snippets" name="Website Snippets">
-        <xpath expr="//ul" position="inside">
-            <li>
-                <a class="scroll-link" href="#snippet_website">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-square fa-stack-2x fa-inverse"></i>
-                        <i class="fa fa-bicycle fa-stack-1x"></i>
-                    </span>
-                </a>
-            </li>
-        </xpath>
-        <xpath expr="//div[@id='o_scroll']//div[@id='snippet_structure']" position="before">
-            <div class="o_panel" id="snippet_website">
-                <div class="o_panel_header">
-                    <span class="fa-stack">
-                        <i class="fa fa-bicycle fa-stack-1x"></i>
-                    </span>
-                    Website
+<openerp>
+    <data>
+        <template id="snippets" inherit_id="website.snippets" name="Snippets">
+            <xpath expr="//ul[@class='nav navbar-nav nav-tabs']" position="inside">
+                <li>
+                    <a data-toggle="tab" href="#snippet_website">Website</a>
+                </li>
+            </xpath>
+            <xpath expr="//div[@class='tab-content']" position="inside">
+                <div class="tab-pane fade" id="snippet_website">
+                    <div>
+                        <div class="oe_snippet_thumbnail">
+                            <img class="oe_snippet_thumbnail_img" src="/website_tutorials/static/src/img/website_icon.png"/>
+                            <span class="oe_snippet_thumbnail_title primary">Website H1</span>
+                        </div>
+                        <section class="oe_snippet_body website_snippet">
+                            <div class="container">
+                                <h1 class="text-center">
+                                    Hello, Snippet!
+                                </h1>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-                <div class="o_panel_body">
-                    <t t-snippet="website_tutorials.s_website_snippet" t-thumbnail="/website_tutorials/static/src/img/website_icon.png"/>
-                </div>
-            </div>
-        </xpath>
-    </template>
-    <template id="s_website_snippet">
-        <section class="website_snippet">
-            <div class="container">
-                <h1 class="text-center">
-                    Hello, Snippet!
-                </h1>
-            </div>
-        </section>
-    </template>
-</odoo>
+            </xpath>
+        </template>
+    </data>
+</openerp>
