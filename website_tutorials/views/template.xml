@@ -17,5 +17,11 @@
                 </div>
             </section>
         </template>
+
+        <template id="snow" inherit_id="website.layout" customize_show="True" active="False" name="Show Snow">
+            <xpath expr="//header" position="before">
+                <canvas id="canvas"/>
+            </xpath>
+        </template>
     </data>
 </openerp>

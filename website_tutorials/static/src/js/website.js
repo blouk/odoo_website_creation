@@ -69,4 +69,126 @@
         }
     });
 
+
+    website.snippet.animationRegistry.snow = website.snippet.Animation.extend({
+        //coming from http://thecodeplayer.com/walkthrough/html5-canvas-snow-effect
+        selector: "#canvas",
+        angle: 0,
+        canvas: {},
+        mp: 50,
+        particles: [],
+        ctx: {},
+        W: 0,
+        H: 0,
+
+        start: function() {
+            var self = this;
+            self.canvas = document.getElementById("canvas");
+            self.ctx = self.canvas.getContext("2d");
+            $(window).resize(function() {
+                self.resize_handler();
+
+            });
+            self.resize_handler();
+            self.build_particles();
+            setInterval(self.draw, 33, self);
+
+        },
+
+        resize_handler: function() {
+            var self = this;
+            self.W = $('#wrapwrap').width();
+            self.H = $('#wrapwrap').height();
+            self.canvas.width = self.W;
+            self.canvas.height = self.H;
+            self.$target.css('width', self.W);
+            self.$target.css('height', self.H);
+
+
+        },
+
+        build_particles: function() {
+            var self = this;
+            for (var i = 0; i < self.mp; i++) {
+                self.particles.push({
+                    x: Math.random() * self.W, //x-coordinate
+                    y: Math.random() * self.H, //y-coordinate
+                    r: Math.random() * 4 + 1, //radius
+                    d: Math.random() * self.mp //density
+                });
+            }
+        },
+
+        draw: function(self) {
+
+            if (!self) var self = this;
+
+            self.ctx.clearRect(0, 0, self.W, self.H);
+
+            self.ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            self.ctx.beginPath();
+            for (var i = 0; i < self.mp; i++) {
+                var p = self.particles[i];
+                self.ctx.moveTo(p.x, p.y);
+                self.ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+            }
+            self.ctx.fill();
+            self.update();
+        },
+
+
+        update: function() {
+            var self = this;
+            self.angle += 0.01;
+            for (var i = 0; i < self.mp; i++) {
+                var p = self.particles[i];
+                //Updating X and Y coordinates
+                //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+                //Every particle has its own density which can be used to make the downward movement different for each flake
+                //Lets make it more random by adding in the radius
+                p.y += Math.cos(self.angle + p.d) + 1 + p.r / 2;
+                p.x += Math.sin(self.angle) * 2;
+
+                //Sending flakes back from the top when it exits
+                //Lets make it a bit more organic and let flakes enter from the left and right also.
+                if (p.x > self.W + 5 || p.x < -5 || p.y > self.H) {
+                    if (i % 3 > 0) //66.67% of the flakes
+                    {
+                        self.particles[i] = {
+                            x: Math.random() * self.W,
+                            y: -10,
+                            r: p.r,
+                            d: p.d
+                        };
+                    } else {
+                        //If the flake is exitting from the right
+                        if (Math.sin(self.angle) > 0) {
+                            //Enter from the left
+                            self.particles[i] = {
+                                x: -5,
+                                y: Math.random() * self.H,
+                                r: p.r,
+                                d: p.d
+                            };
+                        } else {
+                            //Enter from the right
+                            self.particles[i] = {
+                                x: self.W + 5,
+                                y: Math.random() * self.H,
+                                r: p.r,
+                                d: p.d
+                            };
+                        }
+                    }
+                }
+            }
+
+
+        },
+        stop: function() {
+
+        }
+    });
+
+
 })();
