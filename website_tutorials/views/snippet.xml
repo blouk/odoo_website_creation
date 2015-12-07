@@ -34,4 +34,24 @@
             </div>
         </section>
     </template>
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-selector=".website_snippet">
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-2">Border</a>
+                    <ul class="dropdown-menu">
+                        <li data-only="click" data-select_class="border-5">
+                            <a>Border 5px</a>
+                        </li>
+                        <li data-only="click" data-select_class="border-10">
+                            <a>Border 10px</a>
+                        </li>
+                        <li data-only="click" data-select_class="border-0">
+                            <a>None</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </xpath>
+    </template>
 </odoo>

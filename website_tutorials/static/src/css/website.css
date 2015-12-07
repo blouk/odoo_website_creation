@@ -2201,4 +2201,8 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 @font-face { font-family: "Cabin Regular"; src: url(/website_tutorials/static/src/font/Cabin-Regular.ttf) format('truetype'), url(/website_tutorials/static/src/font/Cabin-Regular.svg) format('svg'); }
 h1 { border-bottom: 1px solid #c097ff; color: #4b257f; }
 
+.website_snippet.border-5 .container { border: 5px solid #964aff; }
+.website_snippet.border-10 .container { border: 10px solid #964aff; }
+.website_snippet.border-0 .container { border: none; }
+
 /*# sourceMappingURL=website.css.map */
