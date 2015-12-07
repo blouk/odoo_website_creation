@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="website.homepage" name="Homepage">
-        <h1>Hello World</h1>
+        <t t-call="website.layout">
+            <h1>Hello World</h1>
+        </t>
     </template>
 </odoo>
