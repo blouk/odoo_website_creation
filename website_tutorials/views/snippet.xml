@@ -21,10 +21,23 @@
                 </div>
                 <div class="o_panel_body">
                     <t t-snippet="website_tutorials.s_website_snippet" t-thumbnail="/website_tutorials/static/src/img/website_icon.png"/>
+                    <t t-snippet="website_tutorials.s_website_products" t-thumbnail="/website_tutorials/static/src/img/website_icon.png"/>
                 </div>
             </div>
         </xpath>
     </template>
+
+    <template id="s_website_products">
+        <section class="website_products">
+            <div class="container" contenteditable="false">
+                <div class="row">
+                    <h2 class="text-center">Last products</h2>
+                </div>
+                <div class="row product_container"/>
+            </div>
+        </section>
+    </template>
+
     <template id="s_website_snippet">
         <section class="website_snippet">
             <div class="container">

@@ -2205,4 +2205,6 @@ h1 { border-bottom: 1px solid #c097ff; color: #4b257f; }
 .website_snippet.border-10 .container { border: 10px solid #964aff; }
 .website_snippet.border-0 .container { border: none; }
 
+.website_products .product_item img { margin: 5px auto; max-height: 75px; }
+
 /*# sourceMappingURL=website.css.map */
