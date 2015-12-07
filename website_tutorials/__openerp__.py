@@ -11,6 +11,7 @@
         'data/action_server.xml',
         # views
         'views/layout.xml',
+        'views/template.xml',
         'views/theme.xml',
         'views/homepage.xml',
         'views/snippet.xml',

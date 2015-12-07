@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="products_block">
+        <section>
+            <div class="container">
+                <h2>Last Products</h2>
+                <t t-set="last_products" t-value="request.env['product.template'].search([('website_published','=',True)],order='id DESC',limit=3)"/>
+                <t t-as="product" t-foreach="last_products">
+                    <div class="col-md-4">
+                        <h4 class="text-center"><t t-esc="product.name"/></h4>
+                        <div class="text-center">
+                            <span itemprop="image" t-field-options='{"widget": "image","alt-field": "name"}' t-field="product.image"/>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </section>
+    </template>
+</odoo>
