@@ -1,0 +1,6 @@
+*.py[cod]
+.project
+.pydevproject
+.settings
+.sass-cache
+.sass-cache/*
