@@ -52,6 +52,22 @@
                     </ul>
                 </li>
             </div>
+            <div data-js="snippet_handler" data-selector=".website_snippet">
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-2">Rotation (deg)</a>
+                    <ul class="dropdown-menu">
+                        <li data-set_degree="-5">
+                            <a href="#">-5 deg</a>
+                        </li>
+                        <li data-set_degree="5">
+                            <a href="#">5 deg</a>
+                        </li>
+                        <li data-set_degree="0">
+                            <a href="#">Reset</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
         </xpath>
     </template>
 </odoo>
