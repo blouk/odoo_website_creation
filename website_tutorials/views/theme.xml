@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website Front End Assets">
-        <xpath expr="link[last()]" position="after">
-            <link href="/website_tutorials/static/src/css/website.css" rel="stylesheet" type="text/css"/>
-        </xpath>
-    </template>
-</odoo>
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website Front End Assets">
+            <xpath expr="link[last()]" position="after">
+                <link href="/website_tutorials/static/src/css/website.css" rel="stylesheet" type="text/css"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>

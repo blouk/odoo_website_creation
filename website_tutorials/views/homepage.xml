@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <template id="website.homepage" name="Homepage">
-        <t t-call="website.layout">
-            <section>
-                <div class="container">
-                    <h1>Hello World</h1>
-                </div>
-            </section>
-        </t>
-    </template>
-</odoo>
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="website.homepage" name="Homepage">
+            <t t-call="website.layout">
+                <section>
+                    <div class="container">
+                        <h1>Hello World</h1>
+                    </div>
+                </section>
+            </t>
+        </template>
+    </data>
+</openerp>
