@@ -2,7 +2,11 @@
 <odoo>
     <template id="website.homepage" name="Homepage">
         <t t-call="website.layout">
-            <h1>Hello World</h1>
+            <section>
+                <div class="container">
+                    <h1>Hello World</h1>
+                </div>
+            </section>
         </t>
     </template>
 </odoo>

@@ -9,6 +9,7 @@
 
         #data
         #views
+        'views/theme.xml',
         'views/homepage.xml',
         #backend
 
