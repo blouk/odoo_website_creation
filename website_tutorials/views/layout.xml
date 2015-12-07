@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="layout" inherit_id="website.layout">
+        <!-- change footer -->
+        <xpath expr="//body//main" position="replace">
+            <section>
+                <div class="container">
+                    <div class="col-md-3">
+                        <h3>Left Cols</h3>
+                        <div class="oe_empty oe_structure"/>
+                    </div>
+                    <div class="col-md-9">
+                        <t t-raw="0"/>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+        <xpath expr="//ul[@id='top_menu']" position="attributes">
+            <attribute name="class">nav navbar-nav</attribute>
+        </xpath>
+    </template>
+
+</odoo>

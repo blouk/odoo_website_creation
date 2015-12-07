@@ -9,6 +9,7 @@
 
         # data
         # views
+        'views/layout.xml',
         'views/theme.xml',
         'views/homepage.xml',
         'views/snippet.xml',
